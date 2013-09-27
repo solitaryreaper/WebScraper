@@ -11,9 +11,9 @@ from utils import web_utils, csv_utils
 # define constants here
 EMPTY_STRING = ""
 
-'''
+"""
     Get stats for a single celebrity using his/her URL from healthyceleb.com
-'''
+"""
 
 def get_stats_healthyceleb(url):
     print "Crawling URL .." + url
@@ -55,7 +55,10 @@ def get_stats_healthyceleb(url):
             key, value = EMPTY_STRING, EMPTY_STRING
             
     return celeb_stats
-    
+
+"""
+    Get the master list of all the URLs that need to be crawled for this site
+"""    
 def get_all_urls_celeb_stats(base_url):
     urls = []
     html_all_urls = web_utils.load_html_data_from_url(base_url)
@@ -74,7 +77,6 @@ if __name__ == '__main__':
     celeb_stats_file_header = []
     
     print "Starting crawl of all " + str(len(urls)) + " urls ..."
-    #temp_urls = ['http://healthyceleb.com/karan-singh-grover-height-weight-body-statistics/4427', 'http://healthyceleb.com/shahrukh-khan-height-weight-body-statistics/2020']
     for url in urls:
         try:
             celeb_stats = get_stats_healthyceleb(url)
