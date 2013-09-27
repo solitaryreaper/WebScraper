@@ -107,12 +107,6 @@ if __name__ == '__main__':
         
     csv_utils.write_to_csv('/tmp/stats.csv', csv_all_celebs_data)
     print "Wrote data to CSV file .."
-    
-    '''
-    
-    stats = get_stats_healthyceleb("http://healthyceleb.com/karan-singh-grover-height-weight-body-statistics/4427")
-    print stats
-    
-    '''
+
     
     
